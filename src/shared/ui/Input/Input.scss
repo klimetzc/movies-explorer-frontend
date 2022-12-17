@@ -1,0 +1,48 @@
+.ui-input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 46px;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  border: 0;
+  padding: 0 15px;
+
+  &__label {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #a0a0a0;
+    margin-bottom: 10px;
+  }
+
+  &__error-message {
+    visibility: hidden;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    min-height: 10px;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: #ee3465;
+  }
+
+  &__error-visible {
+    visibility: visible;
+  }
+
+  &#{&}__error {
+    color: #ee3465;
+  }
+}
+
+input.ui-input {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.ui-input:focus {
+  outline: 0;
+}

@@ -1,0 +1,66 @@
+@use "../../../variables.scss";
+@import "../../../media.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+
+  @include _900 {
+    padding: 0 30px;
+  }
+  @include _500 {
+    padding: 0 10px;
+  }
+  &__title {
+    padding: 80px 70px 20px;
+    text-align: center;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: variables.$textGray;
+    border-bottom: 1px solid variables.$gray;
+    @include _500 {
+      padding: 80px 0 20px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &__info {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    font-size: 13px;
+    line-height: 16px;
+    gap: 20px;
+    padding: 20px 0;
+    @include _500 {
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      padding: 30px 0 10px;
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
+  &__copy {
+    margin: 0;
+    margin-right: auto;
+    @include _500 {
+      color: variables.$textGray;
+      margin: 0;
+      order: 5;
+      padding-top: 30px;
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: variables.$black;
+  }
+}

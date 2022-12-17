@@ -1,2 +1,1 @@
-# movies-explorer-frontend
-Frontend of "Movies Explorer"
+Movies - frontend
