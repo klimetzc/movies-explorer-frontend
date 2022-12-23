@@ -67,6 +67,7 @@
     &__badges {
       display: flex;
       gap: 10px;
+      padding: 0;
     }
     &__badge {
       @include centerFlex();
@@ -108,7 +109,7 @@
       @include _900 {
         padding-bottom: 90px;
       }
-      @include _500 {
+      @media screen and (max-width: 700px) {
         display: flex;
         flex-direction: column;
       }
@@ -197,7 +198,7 @@
         font-size: 12px;
         line-height: 18px;
       }
-      @include _500 {
+      @media screen and (max-width: 700px) {
         width: 100%;
         font-size: 11px;
         line-height: 16px;
@@ -223,7 +224,9 @@
       flex-direction: row;
       justify-content: center;
       gap: 10px;
-      @include _500 {
+      padding: 0;
+
+      @media screen and (max-width: 700px) {
         display: grid;
         grid-template-columns: repeat(2, max-content);
       }

@@ -6,12 +6,12 @@ import './SavedMoviesPage.scss';
 
 function SavedMoviesPage() {
   return (
-    <div className="saved-movies-page">
-      <div className="saved-movies-page__actions">
+    <main className="saved-movies-page">
+      <section action="" className="saved-movies-page__actions">
         <SearchFilm />
         <FilterFilm />
-      </div>
-      <div className="saved-movies-page__films">
+      </section>
+      <ul className="saved-movies-page__films">
         <Film.Card isInProfile />
         <Film.Card isInProfile />
         <Film.Card isInProfile />
@@ -21,8 +21,8 @@ function SavedMoviesPage() {
         <Film.Card isInProfile />
         <Film.Card isInProfile />
         <Film.Card isInProfile />
-      </div>
-    </div>
+      </ul>
+    </main>
   );
 }
 

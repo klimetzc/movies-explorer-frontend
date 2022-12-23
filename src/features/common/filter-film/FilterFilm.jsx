@@ -4,10 +4,10 @@ import './FilterFilms.scss';
 
 function FilterFilm() {
   return (
-    <div className="filter-film">
+    <form action="" className="filter-film">
       <p className="filter-film__label">Короткометражки</p>
       <Switch />
-    </div>
+    </form>
   );
 }
 

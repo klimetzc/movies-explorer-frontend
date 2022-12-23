@@ -7,10 +7,13 @@
   display: flex;
   align-items: center;
   padding: 18px 70px;
+  margin-bottom: 80px;
   @include _900 {
     padding: 18px 30px;
   }
-
+  @media screen and (max-width: 900px) {
+    margin-bottom: 60px;
+  }
   &__logo {
     margin-right: auto;
   }
@@ -81,7 +84,7 @@
     line-height: 18px;
 
     &_active {
-      font-weight: bold;
+      font-weight: 500;
     }
   }
 
@@ -141,7 +144,7 @@
     &-link {
       text-decoration: none;
       color: black;
-      font-weight: bold;
+      font-weight: 500;
       font-size: 18px;
       line-height: 22px;
 

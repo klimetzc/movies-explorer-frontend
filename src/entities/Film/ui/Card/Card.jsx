@@ -6,7 +6,7 @@ import mockImage from '../../../../shared/assets/mock-film.png';
 
 export function Card({ isInProfile }) {
   return (
-    <div className="entity-film">
+    <li className="entity-film">
       <div className="entity-film__header">
         <div className="entity-film__text">
           <h2 className="entity-film__title">33 слова о дизайне</h2>
@@ -18,8 +18,8 @@ export function Card({ isInProfile }) {
             : <button className={classNames('entity-film__like', Math.random() > 0.5 && 'entity-film__like_active')} type="button" />
         }
       </div>
-      <img src={mockImage} alt="#" className="entity-film__image" />
-    </div>
+      <img src={mockImage} alt="Картинка фильма" className="entity-film__image" />
+    </li>
   );
 }
 

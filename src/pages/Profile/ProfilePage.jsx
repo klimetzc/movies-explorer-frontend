@@ -9,11 +9,10 @@ function ProfilePage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('submit');
   };
 
   return (
-    <div className="profile-page">
+    <main className="profile-page">
       <h1 className="profile-page__hello">
         Привет,
         {' '}
@@ -31,13 +30,17 @@ function ProfilePage() {
           E-mail
           <input type="text" id={emailId} className="profile-page__input" placeholder="E-mail" value={email} onInput={((event) => { setEmail(event.target.value); })} />
         </label>
-        <div className="profile-page__btns">
-          <button type="submit" className="profile-page__submit">Редактировать</button>
-          <button type="button" className="profile-page__logout">Выйти из аккаунта</button>
-        </div>
+        <ul className="profile-page__btns">
+          <li>
+            <button type="submit" className="profile-page__submit">Редактировать</button>
+          </li>
+          <li>
+            <button type="button" className="profile-page__logout">Выйти из аккаунта</button>
+          </li>
+        </ul>
 
       </form>
-    </div>
+    </main>
   );
 }
 

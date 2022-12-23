@@ -6,8 +6,8 @@ function Switch() {
   const switchId = useId();
   return (
     <>
-      <input type="checkbox" name="switch" id={switchId} className="ui-switch__checkbox" />
-      <label htmlFor={switchId} className="ui-switch__label" />
+      <input type="checkbox" name="switch" id={switchId} className="ui-switch-checkbox" />
+      <label htmlFor={switchId} className="ui-switch-label" />
     </>
 
   );

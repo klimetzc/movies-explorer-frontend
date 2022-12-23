@@ -8,17 +8,17 @@ function Landing() {
   return (
     <>
       {/* <Header isLanding /> */}
-      <div className="Landing">
-        <div className="Landing-intro">
+      <main className="Landing">
+        <section className="Landing-intro">
           <h1 className="Landing-intro__title">Учебный проект студента факультета веб-разработки.</h1>
-          <div className="Landing-intro__badges">
+          <ul className="Landing-intro__badges">
             <a href="#Landing__about" className="Landing-intro__badge">О проекте</a>
             <a href="#Landing__stack" className="Landing-intro__badge">Технологии</a>
             <a href="#Landing__student" className="Landing-intro__badge">Студент</a>
-          </div>
-        </div>
+          </ul>
+        </section>
 
-        <div className="Landing-about" id="Landing__about">
+        <section className="Landing-about" id="Landing__about">
           <h2 className="Landing-about__title Landing__title">О проекте</h2>
           <div className="Landing-about__description">
             <div className="Landing-about__description-column">
@@ -40,13 +40,13 @@ function Landing() {
               <div className="Landing-about__progress-description">Front-end</div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="Landing-stack" id="Landing__stack">
+        <section className="Landing-stack" id="Landing__stack">
           <h2 className="Landing-stack__title Landing__title">Технологии</h2>
           <h3 className="Landing-stack__description-title">7 технологий</h3>
           <p className="Landing-stack__description">На курсе веб-разработки мы освоили технологии, которые применили в дипломном проекте.</p>
-          <div className="Landing-stack__badges">
+          <ul className="Landing-stack__badges">
             <div className="Landing-stack__badge">HTML</div>
             <div className="Landing-stack__badge">CSS</div>
             <div className="Landing-stack__badge">JS</div>
@@ -54,10 +54,10 @@ function Landing() {
             <div className="Landing-stack__badge">Git</div>
             <div className="Landing-stack__badge">Express.js</div>
             <div className="Landing-stack__badge">mongoDB</div>
-          </div>
-        </div>
+          </ul>
+        </section>
 
-        <div className="Landing-student" id="Landing__student">
+        <section className="Landing-student" id="Landing__student">
           <h2 className="Landing__title Landing-student__title">Студент</h2>
           <div className="Landing-student__profile">
             <div className="Landing-student__profile-text">
@@ -71,21 +71,21 @@ function Landing() {
           </div>
           <div className="Landing-student__portfolio">
             <p className="Landing-student__portfolio-title">Портфолио</p>
-            <a href="#1" className="Landing-student__portfolio-link">
+            <a href="https://github.com/klimetzc/russian-travel" target="_blank" className="Landing-student__portfolio-link" rel="noreferrer">
               <span>Статичный сайт</span>
               <span>↗</span>
             </a>
-            <a href="#2" className="Landing-student__portfolio-link">
+            <a href="https://github.com/klimetzc/lyubimovka" target="_blank" className="Landing-student__portfolio-link" rel="noreferrer">
               <span>Адаптивный сайт</span>
               <span>↗</span>
             </a>
-            <a href="#3" className="Landing-student__portfolio-link">
+            <a href="https://github.com/klimetzc/watermelons" target="_blank" className="Landing-student__portfolio-link" rel="noreferrer">
               <span>Одностраничное приложение</span>
               <span>↗</span>
             </a>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
     </>
   );
 }

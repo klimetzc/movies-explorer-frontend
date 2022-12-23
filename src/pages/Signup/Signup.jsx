@@ -4,9 +4,9 @@ import { Signup } from '../../features/auth/signup';
 
 function SignupPage() {
   return (
-    <div className="signup-page">
+    <main className="signup-page">
       <Signup.Form />
-    </div>
+    </main>
   );
 }
 

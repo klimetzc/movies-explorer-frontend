@@ -4,9 +4,9 @@ import './SigninPage.scss';
 
 function SigninPage() {
   return (
-    <div className="signin-page">
+    <main className="signin-page">
       <Signin.Form />
-    </div>
+    </main>
   );
 }
 

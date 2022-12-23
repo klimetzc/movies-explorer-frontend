@@ -7,9 +7,9 @@ import RouterPages from '../pages';
 function App() {
   return (
     <div className="App">
-      <div className="App__container">
+      <main className="App__container">
         <RouterPages />
-      </div>
+      </main>
     </div>
   );
 }

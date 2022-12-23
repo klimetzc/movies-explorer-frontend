@@ -6,7 +6,7 @@ import Button from '../../../../shared/ui/Button/Button';
 
 export function Form() {
   return (
-    <>
+    <section className="signin-form">
       <Link to="/" className="signin-form__logo" />
       <h1 className="signin-form__header">Рады видеть!</h1>
       <form action="" className="signup-form">
@@ -17,9 +17,9 @@ export function Form() {
       <p className="signin-form__already">
         Еше не зарегистрированы?
         {' '}
-        <Link to="/signup" className="signup-form__link">Регистрация</Link>
+        <Link to="/signup" className="signin-form__link">Регистрация</Link>
       </p>
-    </>
+    </section>
 
   );
 }

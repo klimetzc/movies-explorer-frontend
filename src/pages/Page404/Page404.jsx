@@ -6,7 +6,7 @@ function Page404() {
   const navigate = useNavigate();
   return (
 
-    <div className="page-not-found">
+    <main className="page-not-found">
       <div className="page-not-found__container">
         <h1 className="page-not-found__error">404</h1>
         <p className="page-not-found__description">Страница не найдена</p>
@@ -22,7 +22,7 @@ function Page404() {
         </button>
       </div>
 
-    </div>
+    </main>
   );
 }
 

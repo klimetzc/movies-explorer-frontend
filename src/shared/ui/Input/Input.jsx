@@ -9,11 +9,11 @@ function Input({ label, errorMessage, type }) {
     <>
       {
         label
-          ? <label htmlFor={id} className="ui-input__label">{label}</label>
+          ? <label htmlFor={id} className="ui-input-label">{label}</label>
           : null
       }
-      <input className={classNames('ui-input', errorMessage && 'ui-input__error')} id={id} type={type} />
-      <p className={classNames('ui-input__error-message', errorMessage && 'ui-input__error-visible')}>{errorMessage}</p>
+      <input className={classNames('ui-input', errorMessage && 'ui-input-error')} id={id} type={type} />
+      <p className={classNames('ui-input-error-message', errorMessage && 'ui-input-error-visible')}>{errorMessage}</p>
 
     </>
   );

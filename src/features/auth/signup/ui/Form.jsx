@@ -8,10 +8,10 @@ import './Form.scss';
 
 export function Form() {
   return (
-    <>
+    <section className="signup-form">
       <Link to="/" className="signup-form__logo" />
       <h1 className="signup-form__header">Добро пожаловать!</h1>
-      <form action="" className="signup-form">
+      <form action="">
         <Input label="Имя" />
         <Input label="E-mail" />
         <Input label="Пароль" errorMessage="Что-то пошло не так" type="password" />
@@ -22,7 +22,7 @@ export function Form() {
         {' '}
         <Link to="/signin" className="signup-form__link">Войти</Link>
       </p>
-    </>
+    </section>
 
   );
 }

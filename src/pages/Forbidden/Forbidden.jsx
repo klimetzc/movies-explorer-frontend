@@ -2,7 +2,7 @@ import React from 'react';
 
 function Forbidden() {
   return (
-    <div>403 - Forbidden</div>
+    <main>403 - Forbidden</main>
   );
 }
 

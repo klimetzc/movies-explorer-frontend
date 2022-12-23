@@ -10,12 +10,12 @@ function FilmsPage() {
     document.title = 'Сохранённые фильмы';
   }, []);
   return (
-    <div className="saved-films">
-      <div className="saved-films__actions">
+    <main className="saved-films">
+      <section className="saved-films__actions">
         <SearchFilm />
         <FilterFilm />
-      </div>
-      <div className="saved-films__films">
+      </section>
+      <ul className="saved-films__films">
         <Film.Card />
         <Film.Card />
         <Film.Card />
@@ -25,12 +25,12 @@ function FilmsPage() {
         <Film.Card />
         <Film.Card />
         <Film.Card />
-      </div>
-      <div className="saved-films__more">
+      </ul>
+      <form action="" className="saved-films__more">
         <ShowMore />
-      </div>
+      </form>
 
-    </div>
+    </main>
 
   );
 }
