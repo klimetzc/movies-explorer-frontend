@@ -1,0 +1,391 @@
+@use "../../variables.scss";
+@import "../../media.scss";
+@mixin centerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Landing {
+  padding: 0px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  @include _900 {
+    // padding: 0 20px;
+  }
+  &__title {
+    width: 100%;
+    border-bottom: 1px solid variables.$black;
+    padding: 0 0 23px 0;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 400;
+    margin: 0;
+    @include _500 {
+      font-size: 18px;
+      line-height: 22px;
+      padding-bottom: 28px;
+    }
+  }
+
+  &-intro {
+    @include centerFlex();
+    width: 100%;
+    box-sizing: border-box;
+    background-color: variables.$lightgray;
+    padding: 160px 0 30px;
+    border-radius: 10px;
+    @include _900 {
+      $margin: 20px;
+      padding-top: 350px;
+      margin: 0 $margin;
+      width: calc(100% - $margin * 2);
+    }
+    @include _500 {
+      padding-top: 220px;
+    }
+    &__title {
+      margin: 0;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 58px;
+      padding-bottom: 150px;
+      max-width: 730px;
+      text-align: center;
+      @include _900 {
+        font-size: 40px;
+        line-height: 52px;
+        padding-bottom: 314px;
+      }
+      @include _500 {
+        font-size: 29px;
+        line-height: 37px;
+        padding-bottom: 210px;
+      }
+    }
+    &__badges {
+      display: flex;
+      gap: 10px;
+      padding: 0;
+    }
+    &__badge {
+      @include centerFlex();
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 16px;
+      justify-content: center;
+      width: 96px;
+      height: 36px;
+      background-color: variables.$gray;
+      box-sizing: border-box;
+      text-decoration: none;
+      color: variables.$black;
+      border-radius: 10px;
+      text-align: center;
+      @include _500 {
+        width: 82px;
+        height: 26px;
+        font-size: 10px;
+        line-height: 16px;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  &-about {
+    padding: 110px 70px;
+    @include _900 {
+      padding: 90px 50px;
+    }
+    @include _500 {
+      padding: 70px 18px;
+    }
+    &__description {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: repeat(2, minmax(300px, 550px));
+      padding-bottom: 110px;
+      @include _900 {
+        padding-bottom: 90px;
+      }
+      @media screen and (max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__column-header {
+      margin: 0;
+      padding: 70px 0 26px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+    }
+    &__column-paragraph {
+      margin: 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      @include _900 {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    &__progress {
+      &-bar {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 100%;
+        box-sizing: border-box;
+        @include _500 {
+          grid-template-columns: 100px 1fr 1fr;
+        }
+      }
+      &-percent {
+        background-color: variables.$progressbar;
+        padding: 9px 0;
+        text-align: center;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      &-description {
+        text-align: center;
+        color: variables.$textGray;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        padding-top: 14px;
+        @include _900 {
+          font-weight: 400;
+        }
+      }
+      &-week1 > &-percent {
+        background-color: variables.$blue;
+        color: variables.$purewhite;
+      }
+      &-week4 {
+        grid-column: span 4;
+        @include _500 {
+          grid-column: span 2;
+        }
+      }
+    }
+  }
+
+  &-stack {
+    @include centerFlex();
+    padding: 100px 70px;
+    background-color: variables.$lightgray;
+    @include _900 {
+      padding: 90px 50px;
+    }
+    @include _500 {
+      padding: 70px 18px;
+      background-color: inherit;
+    }
+    &__description {
+      @include centerFlex();
+      margin: 0;
+      align-self: center;
+      font-size: 14px;
+      line-height: 20px;
+      width: 460px;
+      padding-bottom: 100px;
+      text-align: center;
+      @include _900 {
+        padding-bottom: 80px;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      @media screen and (max-width: 700px) {
+        width: 100%;
+        font-size: 11px;
+        line-height: 16px;
+      }
+      &-title {
+        @include centerFlex();
+        margin: 0;
+        font-weight: 400;
+        padding: 90px 0 26px 0;
+        font-size: 50px;
+        line-height: 58px;
+        @include _900 {
+          padding: 80px 0 22px;
+        }
+        @include _500 {
+          font-size: 30px;
+          line-height: 36px;
+        }
+      }
+    }
+    &__badges {
+      @include centerFlex();
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+      padding: 0;
+
+      @media screen and (max-width: 700px) {
+        display: grid;
+        grid-template-columns: repeat(2, max-content);
+      }
+    }
+    &__badge {
+      @include centerFlex();
+      justify-content: center;
+      width: 90px;
+      height: 60px;
+      box-sizing: border-box;
+      font-size: 14px;
+      line-height: 17px;
+      background-color: variables.$gray;
+      border-radius: 10px;
+      @include _900 {
+        font-size: 12px;
+        line-height: 15px;
+        width: 84px;
+        height: 57px;
+      }
+    }
+  }
+
+  &-student {
+    padding: 110px 70px;
+    @include _900 {
+      padding: 90px 50px;
+    }
+    @include _500 {
+      padding: 70px 14px;
+    }
+    &__profile {
+      display: grid;
+      justify-content: space-between;
+      grid-template-columns: 1fr max-content;
+      padding-top: 66px;
+      @include _500 {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 60px;
+        gap: 40px;
+      }
+    }
+    &__name {
+      margin: 0;
+      padding: 0 0 18px 0;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 58px;
+      @include _900 {
+        font-size: 40px;
+        line-height: 40px;
+      }
+      @include _500 {
+        font-size: 30px;
+        line-height: 36px;
+        padding-bottom: 20px;
+      }
+    }
+    &__profession {
+      margin: 0;
+      padding: 0 0 26px 0;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 20px;
+      @include _900 {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      @include _500 {
+        font-size: 11px;
+        line-height: 16px;
+        padding-bottom: 20px;
+      }
+    }
+    &__description {
+      margin: 0;
+      padding: 0 0 100px 0;
+      max-width: 600px;
+      font-size: 14px;
+      line-height: 22px;
+      @include _900 {
+        font-size: 12px;
+        line-height: 18px;
+        max-width: 364px;
+      }
+      @include _500 {
+        font-size: 11px;
+        line-height: 16px;
+        padding-bottom: 40px;
+      }
+    }
+    &__github {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      color: variables.$black;
+    }
+    &__avatar {
+      justify-self: end;
+      width: 270px;
+      height: 327px;
+      background-image: url("../../shared/assets/avatar.png");
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      @include _900 {
+        width: 255px;
+        height: 307px;
+      }
+      @include _500 {
+        // order: 1;
+        width: 100%;
+        // height: 100%;
+      }
+    }
+    &__portfolio-title {
+      margin: 0;
+      padding: 100px 0 0 0;
+      color: variables.$textGray;
+      font-size: 18px;
+      line-height: 20px;
+      @include _900 {
+        padding: 90px 0 30px 0;
+      }
+      @include _500 {
+        padding: 70px 0 20px 0;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &__portfolio-link {
+      padding: 20px 0;
+      width: 100%;
+      text-decoration: none;
+      color: variables.$black;
+      display: flex;
+      justify-content: space-between;
+      font-size: 30px;
+      border-bottom: 1px solid variables.$gray;
+      transition: variables.$transitionNormal;
+      &:last-of-type {
+        border: none;
+        @include _500 {
+          padding-bottom: 0;
+        }
+      }
+      &:hover {
+        color: variables.$textGray;
+      }
+      @include _900 {
+        font-size: 28px;
+        line-height: 50px;
+      }
+      @include _500 {
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+}

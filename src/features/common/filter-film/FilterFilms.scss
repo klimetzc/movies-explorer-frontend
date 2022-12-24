@@ -1,0 +1,17 @@
+.filter-film {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+
+  &__label {
+    margin: 0;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+
+    @media screen and (max-width: 500px) {
+      font-size: 11px;
+      line-height: 18px;
+    }
+  }
+}
